@@ -5,6 +5,7 @@ import {
   Film,
   ArrowDown,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import "../../css/Hero.css"
 
@@ -44,15 +45,15 @@ export default function Hero() {
             </p>
 
             <div className="custom-hero-buttons">
-              <a href="#projects" className="custom-hero-primary-btn">
-                Explore Our Work
+              <Link to='/our-services' className="custom-hero-primary-btn">
+                Explore Our Services
                 <ArrowRight size={17} strokeWidth={2} />
-              </a>
+              </Link>
 
-              <a href="#collaborate" className="custom-hero-secondary-btn">
+              <Link to="/partner-form" className="custom-hero-secondary-btn">
                 Partner With Us
                 <ArrowUpRight size={17} strokeWidth={2} />
-              </a>
+              </Link>
             </div>
 
             {/* Genre Labels */}

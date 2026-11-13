@@ -65,7 +65,7 @@ export default function WhatWeDo() {
         <div className="custom-services-heading">
           <div className="custom-services-heading-left">
             <span className="custom-services-eyebrow">
-              <i></i>
+          
               WHAT WE DO
             </span>
 

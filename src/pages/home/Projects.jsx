@@ -98,19 +98,7 @@ export default function Projects() {
           ))}
         </div>
 
-        <div className="custom-projects-bottom">
-          <div>
-            <span>BEHIND EVERY FRAME, THERE IS A STORY.</span>
-            <h3>
-              Let's create something
-              <em> meaningful.</em>
-            </h3>
-          </div>
-
-          <a href="#collaborate" className="custom-projects-cta">
-            WORK WITH US <ArrowUpRight size={18} />
-          </a>
-        </div>
+       
       </div>
     </section>
   );

@@ -6,6 +6,7 @@ import {
   Clapperboard,
   MonitorPlay,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import "../../css/About.css";
 
@@ -90,10 +91,10 @@ export default function About() {
               to a professional standard.
             </p>
 
-            <a href="#collaborate" className="custom-about-link">
+            <Link to="/about-us" className="custom-about-link">
               Discover Our Approach
               <ArrowRight size={18} />
-            </a>
+            </Link>
           </div>
         </div>
 

@@ -1,0 +1,664 @@
+
+.custom-team-page {
+  overflow: hidden;
+  color: var(--brown);
+  background: var(--white);
+  font-family: var(--font-body);
+}
+
+.custom-team-page h1,
+.custom-team-page h2,
+.custom-team-page h3 {
+  font-family: var(--font-heading);
+}
+
+.custom-team-eyebrow {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--gold-dark);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* HERO */
+
+.custom-team-hero {
+  padding: 50px 0;
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(249, 197, 38, 0.15),
+      transparent 28%
+    ),
+    var(--ivory);
+}
+
+.custom-team-hero-content {
+  padding-bottom: 95px;
+}
+
+.custom-team-hero h1 {
+  margin: 0;
+  font-size: clamp(45px, 6vw, 76px);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -2px;
+}
+
+.custom-team-hero h1 span,
+.custom-team-section-heading h2 span,
+.custom-team-creative-heading h2 span,
+.custom-team-note-content h2 span,
+.custom-team-closing h2 span {
+  color: var(--red-dark);
+  font-style: italic;
+}
+
+.custom-team-hero-content > p {
+  margin: 25px 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.custom-team-hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 9px;
+  color: var(--brown);
+  border-bottom: 1px solid var(--gold-dark);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  text-decoration: none;
+}
+
+.custom-team-hero-link svg {
+  transition: transform 0.25s ease;
+}
+
+.custom-team-hero-link:hover svg {
+  transform: translate(3px, -3px);
+}
+
+.custom-team-hero-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 17px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border-gold);
+  color: var(--text-secondary);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.custom-team-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold-dark);
+}
+
+/* LEADERSHIP */
+
+.custom-team-leadership {
+  padding: 105px 0;
+  background: var(--white);
+}
+
+.custom-team-section-heading {
+  margin-bottom: 45px;
+}
+
+.custom-team-section-heading h2,
+.custom-team-creative-heading h2 {
+  max-width: 700px;
+  margin: 0;
+  font-size: clamp(38px, 4.5vw, 55px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.custom-team-founder {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 75px;
+  align-items: center;
+  padding: 35px;
+  background: var(--ivory);
+  border: 1px solid var(--border-gold);
+}
+
+.custom-team-founder-visual {
+  position: relative;
+  min-width: 0;
+}
+
+.custom-team-founder-frame {
+  position: relative;
+  display: flex;
+  min-height: 390px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(249, 197, 38, 0.18),
+      transparent 45%
+    ),
+    linear-gradient(145deg, var(--brown), var(--black));
+}
+
+.custom-team-founder-frame::before,
+.custom-team-founder-frame::after {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border: 1px solid rgba(249, 197, 38, 0.3);
+  border-radius: 50%;
+  content: "";
+}
+
+.custom-team-founder-frame::after {
+  width: 310px;
+  height: 310px;
+  border-color: rgba(249, 197, 38, 0.13);
+}
+
+.custom-team-founder-initials {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-heading);
+  font-size: 105px;
+  font-weight: 500;
+  letter-spacing: -15px;
+  color: var(--gold-light);
+}
+
+.custom-team-founder-initials span:last-child {
+  color: var(--white);
+}
+
+.custom-team-founder-visual-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 45px 25px 22px;
+  color: var(--white);
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
+}
+
+.custom-team-founder-visual-caption span {
+  color: var(--gold-light);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.custom-team-founder-visual-caption strong {
+  font-family: var(--font-heading);
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.custom-team-founder-index {
+  position: absolute;
+  top: -17px;
+  right: -17px;
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: var(--red-dark);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.custom-team-founder-content {
+  padding: 20px 15px 20px 0;
+}
+
+.custom-team-founder-label {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--gold-dark);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.custom-team-founder-content h3 {
+  margin: 0 0 15px;
+  font-size: clamp(34px, 4vw, 48px);
+  font-weight: 600;
+}
+
+.custom-team-founder-intro {
+  max-width: 480px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.custom-team-bio-placeholder {
+  margin-top: 35px;
+  padding: 22px 25px;
+  background: var(--white);
+  border-left: 3px solid var(--gold-dark);
+}
+
+.custom-team-bio-placeholder > span {
+  color: var(--red-dark);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.custom-team-bio-placeholder p {
+  margin: 10px 0 0;
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.custom-team-designation-note {
+  margin: 15px 0 0;
+  color: var(--text-secondary);
+  font-size: 10px;
+  font-style: italic;
+}
+
+/* CREATIVE TEAM */
+
+.custom-team-creative {
+  padding: 105px 0;
+  background: var(--ivory);
+}
+
+.custom-team-creative-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 45px;
+  margin-bottom: 55px;
+}
+
+.custom-team-creative-heading > p {
+  max-width: 410px;
+  margin: 0 0 5px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.custom-team-roles {
+  border-top: 1px solid var(--border-gold);
+  border-left: 1px solid var(--border-gold);
+}
+
+.custom-team-role-card {
+  position: relative;
+  height: 100%;
+  min-height: 220px;
+  padding: 28px;
+  overflow: hidden;
+  border-right: 1px solid var(--border-gold);
+  border-bottom: 1px solid var(--border-gold);
+  transition: background 0.3s ease;
+}
+
+.custom-team-role-card:hover {
+  background: var(--white);
+}
+
+.custom-team-role-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.custom-team-role-top span {
+  color: var(--gold-dark);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.custom-team-role-top svg {
+  color: var(--red-dark);
+}
+
+.custom-team-role-card h3 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.custom-team-role-card p {
+  max-width: 290px;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.custom-team-role-line {
+  width: 0;
+  height: 2px;
+  margin-top: 22px;
+  background: var(--gold-dark);
+  transition: width 0.3s ease;
+}
+
+.custom-team-role-card:hover .custom-team-role-line {
+  width: 45px;
+}
+
+.custom-team-network-note {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 30px;
+  padding: 23px 27px;
+  color: var(--white);
+  background: var(--brown);
+}
+
+.custom-team-network-note svg {
+  flex: 0 0 auto;
+  color: var(--gold-light);
+}
+
+.custom-team-network-note p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* FOUNDER'S NOTE */
+
+.custom-team-founder-note {
+  position: relative;
+  padding: 110px 0;
+  color: var(--white);
+  background:
+    radial-gradient(
+      circle at 10% 90%,
+      rgba(249, 197, 38, 0.1),
+      transparent 35%
+    ),
+    linear-gradient(130deg, var(--black), var(--brown));
+}
+
+.custom-team-note-inner {
+  display: grid;
+  grid-template-columns: 0.65fr 1.35fr;
+  gap: 65px;
+}
+
+.custom-team-note-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.custom-team-note-label .custom-team-eyebrow {
+  color: var(--gold-light);
+}
+
+.custom-team-note-label > svg {
+  margin-top: 20px;
+  color: var(--gold-light);
+  opacity: 0.8;
+}
+
+.custom-team-note-content h2 {
+  margin: 0 0 30px;
+  color: var(--white);
+  font-size: clamp(34px, 4vw, 49px);
+  line-height: 1.2;
+}
+
+.custom-team-note-content h2 span {
+  color: var(--gold-light);
+}
+
+.custom-team-note-content blockquote {
+  margin: 0;
+  color: rgba(255, 248, 233, 0.88);
+  font-family: var(--font-heading);
+  font-size: clamp(18px, 2vw, 23px);
+  font-style: italic;
+  line-height: 1.9;
+}
+
+.custom-team-note-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 35px;
+}
+
+.custom-team-note-author > span {
+  width: 38px;
+  height: 1px;
+  background: var(--gold-light);
+}
+
+.custom-team-note-author div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.custom-team-note-author strong {
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.custom-team-note-author small {
+  color: var(--gold-light);
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.custom-team-note-disclaimer {
+  margin: 12px 0 0 52px;
+  color: rgba(255, 248, 233, 0.5);
+  font-size: 10px;
+  font-style: italic;
+}
+
+/* CLOSING */
+
+.custom-team-closing {
+  padding: 85px 0;
+  text-align: center;
+  background: var(--white);
+}
+
+.custom-team-closing h2 {
+  margin: 0 auto 27px;
+  font-size: clamp(37px, 4.5vw, 55px);
+  line-height: 1.2;
+}
+
+.custom-team-closing-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 22px;
+  color: var(--white);
+  background: var(--red-dark);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+  transition: background 0.25s ease;
+}
+
+.custom-team-closing-link:hover {
+  color: var(--white);
+  background: var(--brown);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  .custom-team-founder {
+    gap: 35px;
+  }
+
+  .custom-team-founder-frame {
+    min-height: 340px;
+  }
+
+  .custom-team-creative-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .custom-team-note-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .custom-team-note-label {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .custom-team-note-label > svg {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .custom-team-hero {
+    padding-top: 75px;
+  }
+
+  .custom-team-hero-content {
+    padding-bottom: 65px;
+  }
+
+  .custom-team-hero h1 {
+    font-size: 44px;
+    letter-spacing: -1px;
+  }
+
+  .custom-team-hero-footer {
+    gap: 10px;
+    font-size: 8px;
+  }
+
+  .custom-team-leadership,
+  .custom-team-creative,
+  .custom-team-founder-note {
+    padding: 75px 0;
+  }
+
+  .custom-team-section-heading {
+    margin-bottom: 35px;
+  }
+
+  .custom-team-founder {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .custom-team-founder-frame {
+    min-height: 340px;
+  }
+
+  .custom-team-founder-content {
+    padding: 0 5px 10px;
+  }
+
+  .custom-team-founder-content h3 {
+    font-size: 36px;
+  }
+
+  .custom-team-creative-heading {
+    margin-bottom: 35px;
+  }
+
+  .custom-team-role-card {
+    min-height: 195px;
+    padding: 23px;
+  }
+
+  .custom-team-network-note {
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .custom-team-note-inner {
+    gap: 25px;
+  }
+
+  .custom-team-note-content h2 {
+    font-size: 36px;
+  }
+
+  .custom-team-note-content blockquote {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-team-hero h1 {
+    font-size: 38px;
+  }
+
+  .custom-team-section-heading h2,
+  .custom-team-creative-heading h2 {
+    font-size: 37px;
+  }
+
+  .custom-team-founder-frame {
+    min-height: 290px;
+  }
+
+  .custom-team-founder-initials {
+    font-size: 85px;
+  }
+
+  .custom-team-founder-content h3 {
+    font-size: 31px;
+  }
+
+  .custom-team-note-content h2 {
+    font-size: 32px;
+  }
+
+  .custom-team-note-content blockquote {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .custom-team-closing h2 {
+    font-size: 36px;
+  }
+}

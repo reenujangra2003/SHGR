@@ -8,6 +8,7 @@ import {
   ArrowUp,
   Send,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import "../css/Footer.css";
 
 const quickLinks = [
@@ -90,10 +91,10 @@ export default function Footer() {
             </h2>
           </div>
 
-          <a href="#collaborate" className="custom-footer-top-link">
-            COLLABORATE WITH US
+          <Link to="/partner-form" className="custom-footer-top-link">
+            PARTNER WITH US
             <ArrowUpRight size={18} />
-          </a>
+          </Link>
         </div>
 
         {/* Footer columns */}

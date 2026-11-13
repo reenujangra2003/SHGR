@@ -1,13 +1,14 @@
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About Us", href: "#about" },
-  { name: "What We Do", href: "#services" },
-  { name: "Our Genres", href: "#genres" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about-us" },
+  { name: "Our Expertise", href: "/our-expertise" },
+  { name: "Our Services", href: "/our-services" },
+  { name: "Our Team", href: "/our-team" },
+  { name: "Contact Us", href: "/contact-us" },
 ];
 
 export default function Header() {
@@ -38,10 +39,10 @@ export default function Header() {
 
         {/* Header CTA */}
         <div className="custom-header-actions">
-          <a href="#collaborate" className="custom-header-cta">
+          <Link to="/partner-form" className="custom-header-cta">
             <span>Partner With Us</span>
             <i className="fa-solid fa-arrow-right"></i>
-          </a>
+          </Link>
 
           {/* Mobile Toggle */}
           <button
@@ -71,14 +72,14 @@ export default function Header() {
           </a>
         ))}
 
-        <a
-          href="#collaborate"
+        <Link
+          to="/partner-form"
           className="custom-mobile-cta"
           onClick={closeMenu}
         >
           Partner With Us
           <i className="fa-solid fa-arrow-right"></i>
-        </a>
+        </Link>
       </div>
     </header>
   );

@@ -8,6 +8,7 @@ import {
   BadgeCheck,
   ArrowUpRight,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const reasons = [
   {
@@ -121,10 +122,10 @@ export default function WhySHGR() {
             <h3>Creative Vision. Professional Execution.</h3>
           </div>
 
-          <a href="#collaborate" className="custom-why-footer-link">
+          <Link to="/contact-us" className="custom-why-footer-link">
             WORK WITH US
             <ArrowUpRight size={18} />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
