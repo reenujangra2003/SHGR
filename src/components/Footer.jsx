@@ -7,6 +7,7 @@ import {
   ArrowUpRight,
   Send,
   ArrowUp,
+  Film,
 } from "lucide-react";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
@@ -36,8 +37,8 @@ export default function Footer() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
 
+    setForm((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: "" }));
     setSubmitted(false);
   };
@@ -90,187 +91,150 @@ export default function Footer() {
 
   return (
     <footer className="custom-footer" id="contact">
-      {/* Top CTA */}
-      <div className="custom-footer-top">
+
+      {/* Main Brand Banner */}
+      <div className="custom-footer-banner">
         <div className="container">
-          <div className="custom-footer-cta">
-            <div>
-              <span>HAVE A STORY TO TELL?</span>
+          <div className="custom-footer-banner-inner">
+            <div className="custom-footer-banner-content">
+              <span className="custom-footer-overline">
+                BEHIND EVERY FRAME, THERE IS A STORY
+              </span>
+
               <h2>
-                Let's Create Something <strong>Meaningful.</strong>
+                Every Great Story
+                <br />
+                Begins With <span>An Idea.</span>
               </h2>
+
+              <p>
+                Let's bring meaningful stories to life through
+                creativity, collaboration and cinema.
+              </p>
+
+              <a href="#collaborate" className="custom-footer-banner-btn">
+                START A CONVERSATION
+                <ArrowUpRight size={17} />
+              </a>
             </div>
 
-            <a href="#collaborate" className="custom-footer-cta-button">
-              COLLABORATE WITH US
-              <ArrowUpRight size={18} />
-            </a>
+            <div className="custom-footer-banner-visual">
+              <div className="custom-footer-film-circle">
+                <Film size={65} strokeWidth={1} />
+                <span>SHGR</span>
+                <small>ENTERTAINMENT</small>
+              </div>
+
+              <span className="custom-footer-visual-caption">
+                STORIES THAT STAY WITH YOU
+              </span>
+            </div>
+
+            <span className="custom-footer-banner-number">SHGR.</span>
           </div>
         </div>
       </div>
 
-      {/* Main Footer */}
+      {/* Main Footer Content */}
       <div className="custom-footer-main">
         <div className="container">
-          <div className="row g-5">
+
+          <div className="custom-footer-main-grid">
 
             {/* Brand */}
-            <div className="col-lg-3 col-md-6">
-              <div className="custom-footer-brand">
-                <a href="#home" className="custom-footer-logo">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/images/logo.png`}
-                    alt="SHGR Entertainment"
-                  />
+            <div className="custom-footer-brand">
+              <a href="#home" className="custom-footer-logo">
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/logo.png`}
+                  alt="SHGR Entertainment"
+                />
+              </a>
+
+              <h3>
+                Stories That Inspire.
+                <br />
+                <span>Cinema That Endures.</span>
+              </h3>
+
+              <p>
+                A new-generation Indian film and web series
+                production house creating devotional and fiction
+                stories rooted in culture, emotion and craft.
+              </p>
+
+              <div className="custom-footer-socials">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram size={17} />
                 </a>
 
-                <h3>SHGR Entertainment</h3>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                >
+                  <FaFacebook size={17} />
+                </a>
 
-                <p>
-                  A new-generation Indian film and web series production
-                  house creating devotional and fiction stories rooted
-                  in culture, emotion and craft.
-                </p>
-
-                <div className="custom-footer-tagline">
-                  STORIES THAT INSPIRE.
-                  <br />
-                  CINEMA THAT ENDURES.
-                </div>
-
-
-<div className="custom-footer-socials">
-  <a
-    href="https://www.instagram.com/YOUR_USERNAME/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Instagram"
-  >
-    <FaInstagram size={17} />
-  </a>
-
-  <a
-    href="https://www.facebook.com/YOUR_PAGE/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Facebook"
-  >
-    <FaFacebook size={17} />
-  </a>
-
-  <a
-    href="https://www.youtube.com/@YOUR_CHANNEL"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="YouTube"
-  >
-    <FaYoutube size={18} />
-  </a>
-</div>
-
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                >
+                  <FaYoutube size={18} />
+                </a>
               </div>
             </div>
 
-            {/* Quick Links */}
-            <div className="col-lg-2 col-md-6">
-              <div className="custom-footer-column">
-                <h4>Quick Links</h4>
-                <span className="custom-footer-heading-line"></span>
-
-                <ul>
-                  {quickLinks.map((link) => (
-                    <li key={link.label}>
-                      <a href={link.href}>
-                        <ArrowUpRight size={13} />
-                        {link.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+            {/* Navigation */}
+            <div className="custom-footer-navigation">
+              <div className="custom-footer-section-heading">
+                <span>EXPLORE</span>
+                <h4>Discover SHGR</h4>
               </div>
-            </div>
 
-            {/* Contact Details */}
-            <div className="col-lg-4 col-md-6">
-              <div className="custom-footer-column custom-footer-contact">
-                <h4>Get In Touch</h4>
-                <span className="custom-footer-heading-line"></span>
-
-                <div className="custom-footer-contact-item">
-                  <div className="custom-footer-contact-icon">
-                    <MapPin size={18} />
-                  </div>
-
-                  <div>
-                    <span>REGISTERED OFFICE</span>
-                    <p>
-                      545, Arun Vihar, Sector 37,
-                      Noida, Gautam Budh Nagar,
-                      Uttar Pradesh – 201301
-                    </p>
-                  </div>
-                </div>
-
-                <div className="custom-footer-contact-item">
-                  <div className="custom-footer-contact-icon">
-                    <MapPin size={18} />
-                  </div>
-
-                  <div>
-                    <span>DELHI OFFICE</span>
-                    <p>
-                      171, First Floor, AGCR Enclave,
-                      Delhi – 110092
-                    </p>
-                  </div>
-                </div>
-
-                <div className="custom-footer-contact-item">
-                  <div className="custom-footer-contact-icon">
-                    <Phone size={17} />
-                  </div>
-
-                  <div>
-                    <span>CONTACT PERSON</span>
-                    <p>Shashi Kulshreshtha</p>
-                    <a href="tel:+919868116252">
-                      +91 98681 16252
+              <ul>
+                {quickLinks.map((link, index) => (
+                  <li key={link.label}>
+                    <a href={link.href}>
+                      <span className="custom-footer-link-number">
+                        0{index + 1}
+                      </span>
+                      {link.label}
+                      <ArrowUpRight size={14} />
                     </a>
-                  </div>
-                </div>
-
-                <div className="custom-footer-contact-item">
-                  <div className="custom-footer-contact-icon">
-                    <Mail size={17} />
-                  </div>
-
-                  <div>
-                    <span>EMAIL ADDRESS</span>
-                    <p className="custom-footer-email-placeholder">
-                      Official email to be added
-                    </p>
-                  </div>
-                </div>
-              </div>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* Contact Form */}
-            <div className="col-lg-3 col-md-6">
-              <div className="custom-footer-form-wrapper">
-                <h4>Send Us a Message</h4>
-                <p>
-                  Have an idea, proposal or collaboration opportunity?
-                  Write to us.
-                </p>
+            <div className="custom-footer-inquiry">
+              <div className="custom-footer-section-heading">
+                <span>LET'S CONNECT</span>
+                <h4>Have a Story in Mind?</h4>
+              </div>
 
-                {submitted && (
-                  <div className="custom-footer-success">
-                    Your form is valid. Connect the backend to submit
-                    your enquiry.
-                  </div>
-                )}
+              <p>
+                Share your idea, proposal or collaboration opportunity
+                with our team.
+              </p>
 
-                <form onSubmit={handleSubmit} noValidate>
+              {submitted && (
+                <div className="custom-footer-success">
+                  Your form is valid. Connect the backend to submit
+                  your enquiry.
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit} noValidate>
+                <div className="custom-footer-form-row">
                   <div className="custom-footer-input-group">
                     <input
                       type="text"
@@ -292,7 +256,9 @@ export default function Footer() {
                     />
                     {errors.email && <small>{errors.email}</small>}
                   </div>
+                </div>
 
+                <div className="custom-footer-form-row">
                   <div className="custom-footer-input-group">
                     <input
                       type="tel"
@@ -314,36 +280,108 @@ export default function Footer() {
                     />
                     {errors.subject && <small>{errors.subject}</small>}
                   </div>
+                </div>
 
-                  <div className="custom-footer-input-group">
-                    <textarea
-                      name="message"
-                      rows="3"
-                      placeholder="Your Message *"
-                      value={form.message}
-                      onChange={handleChange}
-                    ></textarea>
-                    {errors.message && <small>{errors.message}</small>}
-                  </div>
+                <div className="custom-footer-input-group">
+                  <textarea
+                    name="message"
+                    rows="3"
+                    placeholder="Tell us about your idea *"
+                    value={form.message}
+                    onChange={handleChange}
+                  />
+                  {errors.message && <small>{errors.message}</small>}
+                </div>
 
-                  <button type="submit" className="custom-footer-submit">
-                    SEND MESSAGE
-                    <Send size={15} />
-                  </button>
-                </form>
+                <button type="submit" className="custom-footer-submit">
+                  SEND YOUR ENQUIRY
+                  <Send size={15} />
+                </button>
+              </form>
+            </div>
+          </div>
+
+          {/* Office Details */}
+          <div className="custom-footer-offices">
+
+            <div className="custom-footer-office-title">
+              <span>FIND US</span>
+              <h4>Our Offices</h4>
+            </div>
+
+            <div className="custom-footer-office-item">
+              <div className="custom-footer-office-icon">
+                <MapPin size={19} />
+              </div>
+
+              <div>
+                <span>REGISTERED OFFICE</span>
+                <p>
+                  545, Arun Vihar, Sector 37,
+                  Noida, Gautam Budh Nagar,
+                  Uttar Pradesh – 201301
+                </p>
+              </div>
+            </div>
+
+            <div className="custom-footer-office-item">
+              <div className="custom-footer-office-icon">
+                <MapPin size={19} />
+              </div>
+
+              <div>
+                <span>DELHI OFFICE</span>
+                <p>
+                  171, First Floor, AGCR Enclave,
+                  Delhi – 110092
+                </p>
+              </div>
+            </div>
+
+            <div className="custom-footer-office-item custom-footer-phone">
+              <div className="custom-footer-office-icon">
+                <Phone size={19} />
+              </div>
+
+              <div>
+                <span>CONTACT US</span>
+                <p>Shashi Kulshreshtha</p>
+                <a href="tel:+919868116252">
+                  +91 98681 16252
+                </a>
+              </div>
+            </div>
+
+            <div className="custom-footer-office-item">
+              <div className="custom-footer-office-icon">
+                <Mail size={19} />
+              </div>
+
+              <div>
+                <span>EMAIL ADDRESS</span>
+                <p className="custom-footer-email-placeholder">
+                  Official email to be added
+                </p>
               </div>
             </div>
 
           </div>
 
-          {/* Bottom Footer */}
-          <div className="custom-footer-bottom">
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="custom-footer-bottom">
+        <div className="container">
+          <div className="custom-footer-bottom-inner">
             <p>
               © {currentYear} <strong>SHGR Entertainment.</strong>
               {" "}All Rights Reserved.
             </p>
 
-            <p>Crafted with a passion for meaningful storytelling.</p>
+            <span className="custom-footer-bottom-tagline">
+              MADE FOR STORIES. BUILT ON CRAFT.
+            </span>
 
             <a href="#home" className="custom-footer-back-top">
               BACK TO TOP
@@ -352,6 +390,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
     </footer>
   );
 }
