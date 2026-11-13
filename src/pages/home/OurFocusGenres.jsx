@@ -105,13 +105,6 @@ export default function OurFocusGenres() {
             );
           })}
         </div>
-
-        <div className="custom-genres-bottom">
-          <span>OUR CREATIVE PHILOSOPHY</span>
-          <p>
-            Different genres. Shared purpose. <strong>Stories with meaning.</strong>
-          </p>
-        </div>
       </div>
     </section>
   );

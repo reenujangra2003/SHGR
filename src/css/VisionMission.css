@@ -1,0 +1,655 @@
+
+/* ========================================
+   VISION & MISSION SECTION
+======================================== */
+
+.custom-vision-mission {
+  position: relative;
+  padding: 90px 0 100px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(249, 197, 38, 0.07),
+      transparent 28%
+    ),
+    var(--ivory);
+}
+
+/* Subtle film-inspired background detail */
+
+.custom-vision-mission::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -70px;
+  width: 280px;
+  height: 280px;
+  border: 1px solid rgba(201, 138, 8, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ========================================
+   SECTION HEADING
+======================================== */
+
+.custom-vm-heading {
+  text-align: center;
+  margin: 0 auto 48px;
+}
+
+.custom-vm-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 17px;
+
+  color: var(--red-dark);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.custom-vm-eyebrow i {
+  width: 34px;
+  height: 1px;
+  display: block;
+  background: var(--gold-dark);
+}
+
+.custom-vm-heading h2 {
+  margin: 0;
+  color: var(--brown);
+  font-family: var(--font-heading);
+  font-size: clamp(38px, 4vw, 54px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+
+.custom-vm-heading h2 em {
+  color: var(--red);
+  font-style: italic;
+}
+
+/* ========================================
+   MAIN LAYOUT
+======================================== */
+
+.custom-vm-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* ========================================
+   VISION PANEL
+======================================== */
+
+.custom-vm-vision-panel {
+  position: relative;
+  min-width: 0;
+  min-height: 550px;
+  overflow: hidden;
+  background: var(--brown);
+  border-radius: 10px 10px 10px 10px;
+  isolation: isolate;
+}
+
+.custom-vm-vision-panel::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  border: 1px solid rgba(249, 197, 38, 0.45);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.custom-vm-vision-image {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.custom-vm-vision-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.8s ease;
+}
+
+.custom-vm-vision-panel:hover .custom-vm-vision-image img {
+  transform: scale(1.045);
+}
+
+/* Vision overlay */
+
+.custom-vm-vision-overlay {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 45px 40px 30px;
+
+  color: var(--white);
+
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(23, 20, 17, 0.45) 20%,
+    rgba(75, 10, 20, 0.94) 55%,
+    rgba(65, 12, 18, 0.98) 100%
+  );
+}
+
+/* Vision label */
+
+.custom-vm-vision-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.custom-vm-vision-label span {
+  color: var(--gold-light);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.custom-vm-vision-label i {
+  width: 35px;
+  height: 2px;
+  background: var(--gold);
+}
+
+/* Vision title */
+
+.custom-vm-vision-overlay h3 {
+  max-width: 490px;
+  margin: 0 0 18px;
+
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: clamp(29px, 3vw, 40px);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.custom-vm-vision-overlay h3 em {
+  display: block;
+  color: var(--gold-light);
+  font-style: italic;
+}
+
+.custom-vm-vision-overlay > p {
+  max-width: 520px;
+  margin: 0;
+
+  color: rgba(255, 248, 233, 0.94);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.85;
+}
+
+/* Vision footer */
+
+.custom-vm-vision-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 25px;
+  padding-top: 17px;
+  border-top: 1px solid rgba(255, 226, 122, 0.28);
+
+  color: var(--gold-light);
+}
+
+.custom-vm-vision-bottom span {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.custom-vm-vision-bottom svg {
+  transition: transform 0.3s ease;
+}
+
+.custom-vm-vision-panel:hover .custom-vm-vision-bottom svg {
+  transform: translate(4px, -4px);
+}
+
+/* ========================================
+   MISSION PANEL
+======================================== */
+
+.custom-vm-mission-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  min-height: 550px;
+  padding: 32px 38px 25px;
+
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(201, 138, 8, 0.55);
+  border-radius: 10px;
+}
+
+/* Mission heading */
+
+.custom-vm-mission-heading {
+  margin-bottom: 18px;
+}
+
+.custom-vm-mission-label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 17px;
+}
+
+.custom-vm-mission-label span {
+  color: var(--red-dark);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.custom-vm-mission-label i {
+  width: 65px;
+  height: 1px;
+  background: var(--gold-dark);
+}
+
+.custom-vm-mission-heading h3 {
+  margin: 0;
+  color: var(--brown);
+  font-family: var(--font-heading);
+  font-size: clamp(29px, 3vw, 39px);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.custom-vm-mission-heading h3 em {
+  color: var(--gold-dark);
+  font-style: italic;
+}
+
+/* Mission list */
+
+.custom-vm-mission-list {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.custom-vm-mission-item {
+  display: grid;
+  grid-template-columns: 76px 2px minmax(0, 1fr);
+  align-items: center;
+  gap: 20px;
+  padding: 17px 8px;
+  border-bottom: 1px solid rgba(201, 138, 8, 0.18);
+  transition: background 0.3s ease;
+}
+
+.custom-vm-mission-item:last-child {
+  border-bottom: none;
+}
+
+.custom-vm-mission-item:hover {
+  background: rgba(255, 241, 208, 0.45);
+}
+
+/* Mission icons */
+
+.custom-vm-mission-icon {
+  width: 76px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--red-dark);
+  background: var(--cream);
+  border-radius: 15px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.custom-vm-mission-item:hover .custom-vm-mission-icon {
+  color: var(--white);
+  background: var(--red-dark);
+  transform: translateY(-2px);
+}
+
+/* Vertical divider */
+
+.custom-vm-mission-divider {
+  width: 2px;
+  height: 42px;
+  background: var(--gold-dark);
+}
+
+/* Mission text */
+
+.custom-vm-mission-copy h4 {
+  margin: 0 0 5px;
+  color: var(--brown);
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.custom-vm-mission-copy p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+/* Mission footer */
+
+.custom-vm-mission-footer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(201, 138, 8, 0.2);
+}
+
+.custom-vm-mission-footer span {
+  color: var(--red-dark);
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  white-space: nowrap;
+}
+
+.custom-vm-mission-footer div {
+  width: 45px;
+  height: 2px;
+  background: var(--gold-dark);
+}
+
+/* ========================================
+   LAPTOP
+======================================== */
+
+@media (max-width: 1100px) {
+  .custom-vm-layout {
+    gap: 20px;
+  }
+
+  .custom-vm-vision-panel,
+  .custom-vm-mission-panel {
+    min-height: 510px;
+  }
+
+  .custom-vm-vision-overlay {
+    padding: 35px 28px 25px;
+  }
+
+  .custom-vm-mission-panel {
+    padding: 28px 25px 22px;
+  }
+
+  .custom-vm-mission-item {
+    grid-template-columns: 60px 2px minmax(0, 1fr);
+    gap: 14px;
+    padding: 15px 4px;
+  }
+
+  .custom-vm-mission-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .custom-vm-mission-copy h4 {
+    font-size: 18px;
+  }
+
+  .custom-vm-mission-copy p {
+    font-size: 12px;
+  }
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 991px) {
+  .custom-vision-mission {
+    padding: 75px 0;
+  }
+
+  .custom-vm-heading {
+    margin-bottom: 38px;
+  }
+
+  .custom-vm-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .custom-vm-vision-panel {
+    min-height: 490px;
+  }
+
+  .custom-vm-mission-panel {
+    min-height: auto;
+  }
+
+  .custom-vm-mission-item {
+    grid-template-columns: 76px 2px minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .custom-vm-mission-icon {
+    width: 76px;
+    height: 76px;
+  }
+
+  .custom-vm-mission-copy h4 {
+    font-size: 20px;
+  }
+
+  .custom-vm-mission-copy p {
+    font-size: 13px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 767px) {
+  .custom-vision-mission {
+    padding: 60px 0;
+  }
+
+  .custom-vm-heading {
+    margin-bottom: 30px;
+  }
+
+  .custom-vm-eyebrow {
+    font-size: 9px;
+    letter-spacing: 2px;
+    gap: 9px;
+  }
+
+  .custom-vm-eyebrow i {
+    width: 22px;
+  }
+
+  .custom-vm-heading h2 {
+    font-size: 36px;
+  }
+
+  .custom-vm-vision-panel {
+    min-height: 450px;
+  }
+
+  .custom-vm-vision-overlay {
+    padding: 35px 25px 23px;
+  }
+
+  .custom-vm-vision-overlay h3 {
+    font-size: 32px;
+  }
+
+  .custom-vm-mission-panel {
+    padding: 28px 23px 20px;
+  }
+
+  .custom-vm-mission-heading h3 {
+    font-size: 31px;
+  }
+
+  .custom-vm-mission-item {
+    grid-template-columns: 58px 2px minmax(0, 1fr);
+    gap: 13px;
+    padding: 16px 0;
+  }
+
+  .custom-vm-mission-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 12px;
+  }
+
+  .custom-vm-mission-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .custom-vm-mission-divider {
+    height: 38px;
+  }
+
+  .custom-vm-mission-copy h4 {
+    font-size: 17px;
+  }
+
+  .custom-vm-mission-copy p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .custom-vision-mission {
+    padding: 50px 0;
+  }
+
+  .custom-vm-heading h2 {
+    font-size: 30px;
+  }
+
+  .custom-vm-eyebrow {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+
+  .custom-vm-vision-panel {
+    min-height: 410px;
+  }
+
+  .custom-vm-vision-overlay {
+    padding: 30px 19px 20px;
+  }
+
+  .custom-vm-vision-overlay h3 {
+    font-size: 27px;
+  }
+
+  .custom-vm-vision-overlay > p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .custom-vm-vision-bottom {
+    margin-top: 18px;
+  }
+
+  .custom-vm-mission-panel {
+    padding: 25px 17px 18px;
+  }
+
+  .custom-vm-mission-heading h3 {
+    font-size: 27px;
+  }
+
+  .custom-vm-mission-label span {
+    font-size: 10px;
+  }
+
+  .custom-vm-mission-item {
+    grid-template-columns: 48px 2px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .custom-vm-mission-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .custom-vm-mission-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .custom-vm-mission-copy h4 {
+    font-size: 15px;
+  }
+
+  .custom-vm-mission-copy p {
+    font-size: 11px;
+  }
+
+  .custom-vm-mission-footer span {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-vm-vision-image img,
+  .custom-vm-mission-item,
+  .custom-vm-mission-icon,
+  .custom-vm-vision-bottom svg {
+    transition: none !important;
+  }
+}

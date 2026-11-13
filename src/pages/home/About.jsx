@@ -1,98 +1,83 @@
 
 import {
-  ArrowUpRight,
   ArrowRight,
-  Sparkles,
-  Heart,
+  ArrowUpRight,
+  Flower2,
   Clapperboard,
+  MonitorPlay,
 } from "lucide-react";
+
+import "../../css/About.css";
 
 const values = [
   {
-    number: "01",
-    icon: <Heart size={21} />,
+    icon: Flower2,
     title: "Devotional Cinema",
     description:
-      "Celebrating India's spiritual heritage through meaningful storytelling.",
+      "Stories rooted in India's spiritual heritage and timeless values.",
   },
   {
-    number: "02",
-    icon: <Clapperboard size={21} />,
+    icon: Clapperboard,
     title: "Fiction Storytelling",
     description:
-      "Stories that entertain, engage and reflect real human emotions.",
+      "Engaging, character-driven stories that reflect real human emotions.",
   },
   {
-    number: "03",
-    icon: <Sparkles size={21} />,
-    title: "Professional Craft",
+    icon: MonitorPlay,
+    title: "Web Series",
     description:
-      "Strong stories, skilled teams and care at every stage of production.",
+      "High-quality, impactful series for today's digital audiences.",
   },
 ];
 
 export default function About() {
   return (
-    <section className="custom-about py-5" id="about">
-
+    <section className="custom-about" id="about">
       <div className="container">
 
         {/* Main About Content */}
         <div className="custom-about-main">
 
-          {/* Left Visual */}
+          {/* Production Image */}
           <div className="custom-about-visual">
+            <div className="custom-about-image-accent"></div>
 
             <div className="custom-about-image-frame">
               <img
                 src={`${process.env.PUBLIC_URL}/images/about.webp`}
-                alt="Indian heritage architecture representing SHGR Entertainment"
+                alt="Film production crew working behind the camera on a shoot"
               />
-
-              <div className="custom-about-image-overlay"></div>
-
-              <div className="custom-about-image-caption">
-                <span>OUR PHILOSOPHY</span>
-                <h3>
-                  Every Story Deserves to Be Told With Purpose.
-                </h3>
-              </div>
             </div>
 
-            <div className="custom-about-image-decoration"></div>
-
-            <div className="custom-about-side-label">
-              CULTURE · EMOTION · CRAFT
-            </div>
-
+            <div className="custom-about-image-bottom-line"></div>
           </div>
 
-          {/* Right Content */}
+          {/* About Text */}
           <div className="custom-about-content">
-
-            <div className="custom-about-content-tag">
-              
+            <div className="custom-about-eyebrow">
+              <span></span>
               ABOUT SHGR ENTERTAINMENT
             </div>
 
-            <h3>
-              Stories That Touch
-              <span> The Heart.</span>
-            </h3>
+            <h2>
+              A Production House
+              <br />
+              Built on <span>Meaningful Stories.</span>
+            </h2>
 
             <p>
-              SHGR Entertainment is a production house based in the
-              Delhi NCR region, dedicated to creating meaningful
-              films and web series for audiences across India and beyond.
+              SHGR Entertainment is a film and web series production
+              house based in the Delhi NCR region. We create devotional
+              and fiction content that connects with audiences through
+              strong stories, cultural depth and high production values.
             </p>
 
             <p>
               We believe the strongest stories are those that touch
               the heart and stay with the viewer long after the screen
-              goes dark. Our focus is on{" "}
-              <strong>devotional cinema</strong> that celebrates India's
-              spiritual heritage and{" "}
-              <strong>fiction storytelling</strong> that entertains,
+              goes dark. Our focus is on <strong>devotional cinema</strong>
+              {" "}that celebrates India's spiritual heritage and
+              {" "}<strong>fiction storytelling</strong> that entertains,
               engages and reflects real emotion.
             </p>
 
@@ -107,69 +92,41 @@ export default function About() {
 
             <a href="#collaborate" className="custom-about-link">
               Discover Our Approach
-              <ArrowUpRight size={17} />
+              <ArrowRight size={18} />
             </a>
-
           </div>
-
         </div>
 
         {/* Creative Focus */}
         <div className="custom-about-values">
-
           <div className="custom-about-values-heading">
             <span>OUR CREATIVE FOCUS</span>
             <h3>What Defines Our Stories</h3>
           </div>
 
-          <div className="row g-4">
+          <div className="custom-about-values-list">
+            {values.map((item, index) => {
+              const Icon = item.icon;
 
-            {values.map((item) => (
-              <div className="col-lg-4 col-md-4" key={item.number}>
-                <div className="custom-about-value-card">
-
-                  <div className="custom-about-value-top">
-                    <span>{item.number}</span>
-
-                    <div className="custom-about-value-icon">
-                      {item.icon}
-                    </div>
+              return (
+                <div className="custom-about-value" key={item.title}>
+                  <div className="custom-about-value-icon">
+                    <Icon size={34} strokeWidth={1.6} />
                   </div>
 
-                  <h4>{item.title}</h4>
-
-                  <p>{item.description}</p>
-
-                  <div className="custom-about-value-line"></div>
-
+                  <div className="custom-about-value-content">
+                    <h4>{item.title}</h4>
+                    <p>{item.description}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
-
+              );
+            })}
           </div>
-
         </div>
 
-        {/* Vision Banner */}
-        <div className="custom-about-vision">
-
-          <div>
-            <span>OUR VISION</span>
-
-            <h3>
-              Stories That Inspire.
-              <span> Cinema That Endures.</span>
-            </h3>
-          </div>
-
-          <a href="#contact" aria-label="Contact SHGR Entertainment">
-            <ArrowRight size={22} />
-          </a>
-
-        </div>
+       
 
       </div>
-
     </section>
   );
 }

@@ -9,6 +9,7 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 
+import "../../css/WhatWeDo.css";
 
 const services = [
   {
@@ -57,83 +58,64 @@ const services = [
 
 export default function WhatWeDo() {
   return (
-    <section className="custom-services py-5" id="services">
-
+    <section className="custom-services" id="services">
       <div className="container">
 
         {/* Section Heading */}
-         <div className="custom-projects-heading">
-          <span className="custom-projects-eyebrow">
-            <span></span>
-        WHAT WE DO
-            <span></span>
-          </span>
+        <div className="custom-services-heading">
+          <div className="custom-services-heading-left">
+            <span className="custom-services-eyebrow">
+              <i></i>
+              WHAT WE DO
+            </span>
 
-          <h2>
-              Bringing Stories <span>To Life.</span>
-          </h2>
+            <h2>
+              Bringing Stories
+              <br />
+              <em>To Life.</em>
+            </h2>
+          </div>
+
+          <p className="custom-services-intro">
+            From the first idea to the final frame, we bring together
+            creative thinking, production expertise and careful execution
+            to create meaningful screen experiences.
+          </p>
         </div>
-      
 
-        {/* Services Grid */}
-        <div className="row g-4">
-
+        {/* Services List */}
+        <div className="custom-services-grid">
           {services.map((service) => {
             const Icon = service.icon;
 
             return (
-              <div className="col-lg-4 col-md-6" key={service.number}>
+              <article className="custom-service-item" key={service.number}>
+                <div className="custom-service-item-top">
+                  <span className="custom-service-number">
+                    {service.number}
+                  </span>
 
-                <div className="custom-service-card">
-
-                  {/* Card Header */}
-                  <div className="custom-service-card-top">
-
-                    <div className="custom-service-icon">
-                      <Icon size={25} strokeWidth={1.7} />
-                    </div>
-
-                    <span className="custom-service-number">
-                      {service.number}
-                    </span>
-
-                  </div>
-
-                  {/* Card Content */}
-                  <div className="custom-service-card-content">
-
-                    <h3>{service.title}</h3>
-
-                    <p>{service.description}</p>
-
-                  </div>
-
-                  
-
+                  <Icon
+                    className="custom-service-item-icon"
+                    size={25}
+                    strokeWidth={1.5}
+                  />
                 </div>
 
-              </div>
+                <div className="custom-service-item-content">
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                </div>
+
+                <span className="custom-service-item-line"></span>
+              </article>
             );
           })}
-
         </div>
 
-        {/* Bottom Statement */}
-        <div className="custom-services-bottom">
-
-          <span>FROM CONCEPT TO FINAL DELIVERY</span>
-
-          <div className="custom-services-bottom-line"></div>
-
-          <a href="#collaborate">
-            LET'S COLLABORATE
-            <ArrowUpRight size={16} />
-          </a>
-
-        </div>
+       
 
       </div>
-
     </section>
   );
 }

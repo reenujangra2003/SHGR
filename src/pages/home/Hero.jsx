@@ -6,6 +6,8 @@ import {
   ArrowDown,
 } from "lucide-react";
 
+import "../../css/Hero.css"
+
 export default function Hero() {
   return (
     <section className="custom-hero py-5" id="home">

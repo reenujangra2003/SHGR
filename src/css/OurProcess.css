@@ -1,0 +1,564 @@
+
+/* ========================================
+   OUR PROCESS — EDITORIAL TIMELINE
+======================================== */
+
+.custom-process-section {
+  position: relative;
+  padding: 95px 0 75px;
+  overflow: hidden;
+  background: var(--white);
+}
+
+/* ========================================
+   SECTION HEADING
+======================================== */
+
+.custom-process-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 45px;
+  margin-bottom: 75px;
+}
+
+.custom-process-heading-main {
+  flex: 1;
+}
+
+.custom-process-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+
+  color: var(--red-dark);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.custom-process-eyebrow i {
+  width: 30px;
+  height: 2px;
+  background: var(--gold-dark);
+}
+
+.custom-process-heading h2 {
+  margin: 0;
+  color: var(--brown);
+  font-family: var(--font-heading);
+  font-size: clamp(40px, 4.5vw, 56px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+}
+
+.custom-process-heading h2 em {
+  color: var(--red-dark);
+  font-style: italic;
+}
+
+.custom-process-heading > p {
+  flex: 0 1 390px;
+  margin: 0 0 5px;
+  padding-left: 25px;
+  border-left: 1px solid var(--border-gold);
+
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.9;
+}
+
+/* ========================================
+   TIMELINE
+======================================== */
+
+.custom-process-timeline {
+  position: relative;
+  padding-top: 5px;
+}
+
+/* Continuous line */
+
+.custom-process-progress {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(201, 138, 8, 0.35);
+}
+
+.custom-process-progress span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--gold-dark);
+}
+
+/* Five columns */
+
+.custom-process-steps {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.custom-process-step {
+  position: relative;
+  min-width: 0;
+  padding: 0 22px 15px;
+  border-right: 1px solid rgba(201, 138, 8, 0.18);
+}
+
+.custom-process-step:first-child {
+  padding-left: 0;
+}
+
+.custom-process-step:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+
+/* Timeline marker */
+
+.custom-process-step-marker {
+  position: relative;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+
+  background: var(--ivory);
+  border: 1px solid var(--gold-dark);
+  border-radius: 50%;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.custom-process-step-marker span {
+  color: var(--red-dark);
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.custom-process-step:hover .custom-process-step-marker {
+  background: var(--red-dark);
+  border-color: var(--red-dark);
+  transform: scale(1.08);
+}
+
+.custom-process-step:hover .custom-process-step-marker span {
+  color: var(--gold-light);
+}
+
+/* ========================================
+   STEP CONTENT
+======================================== */
+
+.custom-process-stage {
+  display: block;
+  min-height: 30px;
+  margin-bottom: 10px;
+
+  color: var(--gold-dark);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  line-height: 1.6;
+}
+
+.custom-process-step-content h3 {
+  min-height: 60px;
+
+  color: var(--brown);
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  transition: color 0.3s ease;
+}
+
+.custom-process-step-content p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.85;
+}
+
+/* Bottom accent */
+
+.custom-process-step::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 22px;
+  width: 0;
+  height: 2px;
+  background: var(--red);
+  transition: width 0.35s ease;
+}
+
+.custom-process-step:first-child::after {
+  left: 0;
+}
+
+.custom-process-step:hover::after {
+  width: calc(100% - 44px);
+}
+
+.custom-process-step:last-child:hover::after {
+  width: 100%;
+}
+
+/* ========================================
+   BOTTOM STATEMENT
+======================================== */
+
+.custom-process-footer {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 42px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-gold);
+}
+
+.custom-process-footer > span {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+.custom-process-footer-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border-gold);
+}
+
+.custom-process-footer p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.custom-process-footer p strong {
+  color: var(--red-dark);
+}
+
+.custom-process-footer p em {
+  color: var(--brown);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.custom-process-footer a {
+  width: 37px;
+  height: 37px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--red-dark);
+  border: 1px solid var(--border-gold);
+  border-radius: 50%;
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.custom-process-footer a:hover {
+  color: var(--white);
+  background: var(--red-dark);
+  border-color: var(--red-dark);
+}
+
+/* ========================================
+   LAPTOP
+======================================== */
+
+@media (max-width: 1100px) {
+  .custom-process-heading {
+    gap: 30px;
+  }
+
+  .custom-process-heading h2 {
+    font-size: 46px;
+  }
+
+  .custom-process-heading > p {
+    flex-basis: 330px;
+    font-size: 13px;
+  }
+
+  .custom-process-step {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .custom-process-step:first-child {
+    padding-left: 0;
+  }
+
+  .custom-process-step:last-child {
+    padding-right: 0;
+  }
+
+  .custom-process-step-content h3 {
+    font-size: 17px;
+  }
+
+  .custom-process-stage {
+    font-size: 8px;
+  }
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 991px) {
+  .custom-process-section {
+    padding: 75px 0 60px;
+  }
+
+  .custom-process-heading {
+    margin-bottom: 50px;
+  }
+
+  .custom-process-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 30px;
+  }
+
+  .custom-process-progress {
+    display: none;
+  }
+
+  .custom-process-step {
+    padding: 0 22px 25px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-gold);
+  }
+
+  .custom-process-step:nth-child(odd) {
+    border-right: 1px solid var(--border-gold);
+  }
+
+  .custom-process-step:first-child {
+    padding-left: 0;
+  }
+
+  .custom-process-step:nth-child(even) {
+    padding-right: 0;
+  }
+
+  .custom-process-step:last-child {
+    border-bottom: none;
+  }
+
+  .custom-process-step-marker {
+    margin-bottom: 22px;
+  }
+
+  .custom-process-stage {
+    min-height: auto;
+  }
+
+  .custom-process-step-content h3 {
+    min-height: auto;
+  }
+
+  .custom-process-step::after {
+    display: none;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 767px) {
+  .custom-process-section {
+    padding: 65px 0 50px;
+  }
+
+  .custom-process-heading {
+    display: block;
+    margin-bottom: 35px;
+  }
+
+  .custom-process-heading h2 {
+    font-size: 39px;
+  }
+
+  .custom-process-heading > p {
+    max-width: 480px;
+    margin-top: 20px;
+    padding: 0;
+    border: none;
+    font-size: 13px;
+  }
+
+  .custom-process-steps {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .custom-process-step,
+  .custom-process-step:first-child,
+  .custom-process-step:nth-child(even),
+  .custom-process-step:nth-child(odd) {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    align-items: start;
+    gap: 18px;
+    padding: 22px 0;
+    border-right: none;
+    border-bottom: 1px solid var(--border-gold);
+  }
+
+  .custom-process-step:last-child {
+    border-bottom: none;
+  }
+
+  .custom-process-step-marker {
+    width: 42px;
+    height: 42px;
+    margin: 0;
+  }
+
+  .custom-process-step-content {
+    min-width: 0;
+  }
+
+  .custom-process-stage {
+    min-height: auto;
+    margin-bottom: 8px;
+    font-size: 9px;
+  }
+
+  .custom-process-step-content h3 {
+    min-height: auto;
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+
+  .custom-process-step-content p {
+    font-size: 12px;
+  }
+
+  .custom-process-footer {
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .custom-process-footer > span {
+    width: 100%;
+  }
+
+  .custom-process-footer-line {
+    display: none;
+  }
+
+  .custom-process-footer p {
+    flex: 1;
+    white-space: normal;
+    line-height: 1.8;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .custom-process-section {
+    padding: 55px 0 45px;
+  }
+
+  .custom-process-heading h2 {
+    font-size: 33px;
+  }
+
+  .custom-process-eyebrow {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .custom-process-heading > p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .custom-process-step,
+  .custom-process-step:first-child,
+  .custom-process-step:nth-child(even),
+  .custom-process-step:nth-child(odd) {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 14px;
+    padding: 20px 0;
+  }
+
+  .custom-process-step-marker {
+    width: 38px;
+    height: 38px;
+  }
+
+  .custom-process-step-marker span {
+    font-size: 12px;
+  }
+
+  .custom-process-step-content h3 {
+    font-size: 18px;
+  }
+
+  .custom-process-step-content p {
+    font-size: 11px;
+  }
+
+  .custom-process-footer p {
+    font-size: 8px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-process-step,
+  .custom-process-step *,
+  .custom-process-footer a {
+    transition: none !important;
+    animation: none !important;
+  }
+}

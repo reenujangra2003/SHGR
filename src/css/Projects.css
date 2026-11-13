@@ -1,0 +1,432 @@
+
+/* =========================================
+   PROJECTS SECTION
+========================================= */
+
+.custom-projects {
+  position: relative;
+  padding: 105px 0 90px;
+  background: #fffaf0;
+  overflow: hidden;
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.custom-projects-heading {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: end;
+  gap: 60px;
+  margin-bottom: 58px;
+}
+
+.custom-projects-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--red-dark);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  margin-bottom: 22px;
+}
+
+.custom-projects-eyebrow span {
+  width: 27px;
+  height: 2px;
+  background: var(--gold-dark);
+}
+
+.custom-projects-heading h2 {
+  margin: 0;
+  color: var(--brown);
+  font-family: var(--font-heading);
+  font-size: clamp(43px, 5.5vw, 70px);
+  line-height: 1.08;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
+.custom-projects-heading h2 em {
+  color: var(--red-dark);
+  font-weight: 500;
+}
+
+.custom-projects-intro {
+  max-width: 390px;
+  justify-self: end;
+  padding: 0 0 7px 24px;
+  border-left: 2px solid var(--gold);
+}
+
+.custom-projects-intro-label {
+  color: var(--gold-dark);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.custom-projects-intro p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 14px 0 0;
+}
+
+/* =========================================
+   PROJECT GRID
+========================================= */
+
+.custom-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* =========================================
+   PROJECT CARD
+========================================= */
+
+.custom-project-card {
+  min-width: 0;
+  background: #fff;
+  border: 1px solid rgba(116, 98, 83, 0.14);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.custom-project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(36, 21, 14, 0.1);
+}
+
+/* =========================================
+   PROJECT IMAGE
+========================================= */
+
+.custom-project-image {
+  height: 270px;
+  position: relative;
+  overflow: hidden;
+  background: #e9dfd0;
+}
+
+.custom-project-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.custom-project-card:hover .custom-project-image img {
+  transform: scale(1.05);
+}
+
+.custom-project-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(23, 20, 17, 0.2),
+    transparent 35%,
+    rgba(23, 20, 17, 0.15)
+  );
+  pointer-events: none;
+}
+
+.custom-project-image-number {
+  position: absolute;
+  z-index: 1;
+  top: 17px;
+  left: 18px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* =========================================
+   PROJECT CARD CONTENT
+========================================= */
+
+.custom-project-card-content {
+  padding: 24px 22px 20px;
+}
+
+.custom-project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.custom-project-meta span {
+  color: var(--red-dark);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.custom-project-meta span:last-child {
+  color: var(--text-secondary);
+}
+
+.custom-project-card-content h3 {
+  color: var(--brown);
+  font-family: var(--font-heading);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0 0 12px;
+}
+
+.custom-project-card-content p {
+  min-height: 70px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* =========================================
+   CARD FOOTER
+========================================= */
+
+.custom-project-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(116, 98, 83, 0.17);
+  margin-top: 18px;
+  padding-top: 15px;
+}
+
+.custom-project-card-footer > span:first-child {
+  color: var(--text-secondary);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.custom-project-arrow {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border-gold);
+  border-radius: 50%;
+  color: var(--red-dark);
+  transition: all 0.3s ease;
+}
+
+.custom-project-card:hover .custom-project-arrow {
+  background: var(--red-dark);
+  color: #fff;
+  border-color: var(--red-dark);
+}
+
+/* =========================================
+   BOTTOM CTA
+========================================= */
+
+.custom-projects-bottom {
+  margin-top: 65px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(116, 98, 83, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.custom-projects-bottom > div > span {
+  color: var(--gold-dark);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.custom-projects-bottom h3 {
+  color: var(--brown);
+  font-family: var(--font-heading);
+  font-size: clamp(23px, 3vw, 34px);
+  font-weight: 500;
+  margin: 10px 0 0;
+}
+
+.custom-projects-bottom h3 em {
+  color: var(--red-dark);
+}
+
+.custom-projects-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 15px 22px;
+  background: var(--red-dark);
+  color: #fff;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  white-space: nowrap;
+  transition:
+    background 0.3s ease,
+    gap 0.3s ease;
+}
+
+.custom-projects-cta:hover {
+  background: var(--brown);
+  color: #fff;
+  gap: 20px;
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+  .custom-projects {
+    padding: 85px 0 75px;
+  }
+
+  .custom-projects-heading {
+    grid-template-columns: 1fr 0.8fr;
+    gap: 30px;
+  }
+
+  .custom-projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .custom-project-image {
+    height: 240px;
+  }
+
+  .custom-project-card-content {
+    padding: 22px 18px 18px;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 767px) {
+  .custom-projects {
+    padding: 75px 0 65px;
+  }
+
+  .custom-projects-heading {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 38px;
+  }
+
+  .custom-projects-heading h2 {
+    font-size: 48px;
+    letter-spacing: -1.5px;
+  }
+
+  .custom-projects-intro {
+    justify-self: start;
+    max-width: 100%;
+  }
+
+  .custom-projects-intro p {
+    font-size: 13px;
+  }
+
+  .custom-projects-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .custom-project-image {
+    height: 260px;
+  }
+
+  .custom-project-card-content {
+    padding: 22px 20px;
+  }
+
+  .custom-project-card-content p {
+    min-height: auto;
+  }
+
+  .custom-projects-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 45px;
+  }
+
+  .custom-projects-bottom h3 {
+    font-size: 29px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+  .custom-projects-heading h2 {
+    font-size: 40px;
+  }
+
+  .custom-projects-eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.8px;
+  }
+
+  .custom-project-image {
+    height: 225px;
+  }
+
+  .custom-project-card-content {
+    padding: 20px 18px;
+  }
+
+  .custom-project-card-content h3 {
+    font-size: 19px;
+  }
+
+  .custom-project-meta span {
+    font-size: 9px;
+  }
+
+  .custom-projects-bottom h3 {
+    font-size: 25px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-project-card,
+  .custom-project-image img,
+  .custom-project-arrow,
+  .custom-projects-cta {
+    transition: none;
+  }
+
+  .custom-project-card:hover {
+    transform: none;
+  }
+
+  .custom-project-card:hover .custom-project-image img {
+    transform: none;
+  }
+}

@@ -1,125 +1,137 @@
 
 import {
-  Eye,
-  Target,
+  Flower2,
+  Clapperboard,
+  Layers3,
+  Handshake,
   ArrowUpRight,
-  Sparkles,
 } from "lucide-react";
 
+import "../../css/VisionMission.css";
 
 const missionPoints = [
-  "Honour faith, culture and values with sensitivity and respect.",
-  "Develop original, engaging and well-crafted fiction.",
-  "Maintain professional standards, transparency and timely delivery.",
-  "Build lasting partnerships with creators, platforms, broadcasters and investors.",
+  {
+    icon: Flower2,
+    title: "Honour Our Roots",
+    description:
+      "Celebrate faith, culture and timeless values with sensitivity and respect.",
+  },
+  {
+    icon: Clapperboard,
+    title: "Create Impactful Content",
+    description:
+      "Develop original, engaging and well-crafted fiction and devotional cinema.",
+  },
+  {
+    icon: Layers3,
+    title: "Work with Excellence",
+    description:
+      "Maintain high production standards, transparency and timely delivery.",
+  },
+  {
+    icon: Handshake,
+    title: "Grow Together",
+    description:
+      "Build lasting partnerships with creators, platforms, broadcasters and investors.",
+  },
 ];
 
 export default function VisionMission() {
   return (
-    <section className="custom-vision-mission py-5">
+    <section className="custom-vision-mission" id="vision-mission">
       <div className="container">
 
         {/* Section Heading */}
-         <div className="custom-projects-heading">
-          <span className="custom-projects-eyebrow">
-            <span></span>
-           OUR PURPOSE & DIRECTION
-            <span></span>
+        <div className="custom-vm-heading">
+          <span className="custom-vm-eyebrow">
+            <i></i>
+            OUR PURPOSE &amp; DIRECTION
+            <i></i>
           </span>
 
           <h2>
-            What We <span>Believe In.</span>
+            What We <em>Believe In.</em>
           </h2>
         </div>
-       
 
-        {/* Vision Mission Cards */}
-        <div className="row g-4">
+        {/* Vision and Mission Layout */}
+        <div className="custom-vm-layout">
 
-          {/* Vision Card */}
-          <div className="col-lg-6">
-            <div className="custom-vm-card custom-vm-vision">
+          {/* Vision Panel */}
+          <div className="custom-vm-vision-panel">
+            <div className="custom-vm-vision-image">
+              <img
+                src={`${process.env.PUBLIC_URL}/images/about.webp`}
+                alt="Film crew working on a cinematic production set"
+              />
+            </div>
 
-              <div className="custom-vm-card-top">
-                <div className="custom-vm-icon">
-                  <Eye size={27} strokeWidth={1.6} />
-                </div>
-
-                <span className="custom-vm-number">01</span>
+            <div className="custom-vm-vision-overlay">
+              <div className="custom-vm-vision-label">
+                <span>OUR VISION</span>
+                <i></i>
               </div>
 
-              <div className="custom-vm-card-content">
-                <span className="custom-vm-label">OUR VISION</span>
+              <h3>
+                Creating Stories That
+                <em> Connect Generations.</em>
+              </h3>
 
-                <h3>
-                  Creating Stories That
-                  <em> Connect Generations.</em>
-                </h3>
+              <p>
+                To be a trusted name in Indian entertainment, known
+                for authentic devotional storytelling and high-quality
+                fiction that connects with audiences across generations.
+              </p>
 
-                <p>
-                  To be a trusted name in Indian entertainment,
-                  known for authentic devotional storytelling and
-                  high-quality fiction that connects with audiences
-                  across generations.
-                </p>
+              <div className="custom-vm-vision-bottom">
+                <span>SHGR ENTERTAINMENT</span>
+                <ArrowUpRight size={20} />
               </div>
-
-              <div className="custom-vm-card-footer">
-                <div className="custom-vm-line"></div>
-                <ArrowUpRight size={21} />
-              </div>
-
-              <div className="custom-vm-watermark">
-                <Eye size={150} />
-              </div>
-
             </div>
           </div>
 
-          {/* Mission Card */}
-          <div className="col-lg-6">
-            <div className="custom-vm-card custom-vm-mission">
-
-              <div className="custom-vm-card-top">
-                <div className="custom-vm-icon">
-                  <Target size={27} strokeWidth={1.6} />
-                </div>
-
-                <span className="custom-vm-number">02</span>
+          {/* Mission Panel */}
+          <div className="custom-vm-mission-panel">
+            <div className="custom-vm-mission-heading">
+              <div className="custom-vm-mission-label">
+                <span>OUR MISSION</span>
+                <i></i>
               </div>
 
-              <div className="custom-vm-card-content">
-                <span className="custom-vm-label">OUR MISSION</span>
+              <h3>
+                Purpose Behind
+                <em> Every Frame.</em>
+              </h3>
+            </div>
 
-                <h3>
-                  Purpose Behind
-                  <em> Every Frame.</em>
-                </h3>
+            <div className="custom-vm-mission-list">
+              {missionPoints.map((item, index) => {
+                const Icon = item.icon;
 
-                <ul>
-                  {missionPoints.map((point, index) => (
-                    <li key={index}>
-                      <Sparkles size={15} />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                return (
+                  <div className="custom-vm-mission-item" key={item.title}>
+                    <div className="custom-vm-mission-icon">
+                      <Icon size={27} strokeWidth={1.6} />
+                    </div>
 
-              <div className="custom-vm-card-footer">
-                <div className="custom-vm-line"></div>
-                <ArrowUpRight size={21} />
-              </div>
+                    <div className="custom-vm-mission-divider"></div>
 
-              <div className="custom-vm-watermark">
-                <Target size={150} />
-              </div>
+                    <div className="custom-vm-mission-copy">
+                      <h4>{item.title}</h4>
+                      <p>{item.description}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
 
+            <div className="custom-vm-mission-footer">
+              <span>OUR COMMITMENT TO EVERY STORY</span>
+              <div></div>
             </div>
           </div>
 
         </div>
-
       </div>
     </section>
   );
