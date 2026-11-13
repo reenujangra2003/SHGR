@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import {
   MapPin,
@@ -91,7 +90,6 @@ export default function Footer() {
 
   return (
     <footer className="custom-footer" id="contact">
-
       {/* Main Brand Banner */}
       <div className="custom-footer-banner">
         <div className="container">
@@ -108,8 +106,8 @@ export default function Footer() {
               </h2>
 
               <p>
-                Let's bring meaningful stories to life through
-                creativity, collaboration and cinema.
+                Let's bring meaningful stories to life through creativity,
+                collaboration and cinema.
               </p>
 
               <a href="#collaborate" className="custom-footer-banner-btn">
@@ -138,9 +136,7 @@ export default function Footer() {
       {/* Main Footer Content */}
       <div className="custom-footer-main">
         <div className="container">
-
           <div className="custom-footer-main-grid">
-
             {/* Brand */}
             <div className="custom-footer-brand">
               <a href="#home" className="custom-footer-logo">
@@ -157,38 +153,35 @@ export default function Footer() {
               </h3>
 
               <p>
-                A new-generation Indian film and web series
-                production house creating devotional and fiction
-                stories rooted in culture, emotion and craft.
+                A new-generation Indian film and web series production house
+                creating devotional and fiction stories rooted in culture,
+                emotion and craft.
               </p>
 
               <div className="custom-footer-socials">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
+                <button
+                  type="button"
+                  aria-label="Instagram link"
+                  disabled
                 >
                   <FaInstagram size={17} />
-                </a>
+                </button>
 
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
+                <button
+                  type="button"
+                  aria-label="Facebook link"
+                  disabled
                 >
                   <FaFacebook size={17} />
-                </a>
+                </button>
 
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="YouTube"
+                <button
+                  type="button"
+                  aria-label="YouTube link"
+                  disabled
                 >
                   <FaYoutube size={18} />
-                </a>
+                </button>
               </div>
             </div>
 
@@ -222,14 +215,14 @@ export default function Footer() {
               </div>
 
               <p>
-                Share your idea, proposal or collaboration opportunity
-                with our team.
+                Share your idea, proposal or collaboration opportunity with our
+                team.
               </p>
 
               {submitted && (
                 <div className="custom-footer-success">
-                  Your form is valid. Connect the backend to submit
-                  your enquiry.
+                  Your form is valid. Connect the backend to submit your
+                  enquiry.
                 </div>
               )}
 
@@ -303,7 +296,6 @@ export default function Footer() {
 
           {/* Office Details */}
           <div className="custom-footer-offices">
-
             <div className="custom-footer-office-title">
               <span>FIND US</span>
               <h4>Our Offices</h4>
@@ -317,9 +309,8 @@ export default function Footer() {
               <div>
                 <span>REGISTERED OFFICE</span>
                 <p>
-                  545, Arun Vihar, Sector 37,
-                  Noida, Gautam Budh Nagar,
-                  Uttar Pradesh – 201301
+                  545, Arun Vihar, Sector 37, Noida, Gautam Budh Nagar, Uttar
+                  Pradesh – 201301
                 </p>
               </div>
             </div>
@@ -331,10 +322,7 @@ export default function Footer() {
 
               <div>
                 <span>DELHI OFFICE</span>
-                <p>
-                  171, First Floor, AGCR Enclave,
-                  Delhi – 110092
-                </p>
+                <p>171, First Floor, AGCR Enclave, Delhi – 110092</p>
               </div>
             </div>
 
@@ -346,9 +334,7 @@ export default function Footer() {
               <div>
                 <span>CONTACT US</span>
                 <p>Shashi Kulshreshtha</p>
-                <a href="tel:+919868116252">
-                  +91 98681 16252
-                </a>
+                <a href="tel:+919868116252">+91 98681 16252</a>
               </div>
             </div>
 
@@ -364,9 +350,7 @@ export default function Footer() {
                 </p>
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
 
@@ -375,8 +359,8 @@ export default function Footer() {
         <div className="container">
           <div className="custom-footer-bottom-inner">
             <p>
-              © {currentYear} <strong>SHGR Entertainment.</strong>
-              {" "}All Rights Reserved.
+              © {currentYear} <strong>SHGR Entertainment.</strong> All Rights
+              Reserved.
             </p>
 
             <span className="custom-footer-bottom-tagline">
@@ -390,7 +374,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
     </footer>
   );
 }
