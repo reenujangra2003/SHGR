@@ -1,10 +1,5 @@
 
 import {
-  Lightbulb,
-  ClipboardList,
-  Clapperboard,
-  Film,
-  Send,
   ArrowUpRight,
 } from "lucide-react";
 
