@@ -6,7 +6,6 @@ import {
   Mail,
   ArrowUpRight,
   Send,
-  Clapperboard,
   ArrowUp,
 } from "lucide-react";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";

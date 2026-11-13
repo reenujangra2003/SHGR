@@ -14,7 +14,7 @@ const processSteps = [
     title: "Concept & Script Development",
     description: "We shape the idea, story and screenplay.",
     detail: "IDEA TO SCREENPLAY",
-    icon: Lightbulb,
+
   },
   {
     number: "02",
@@ -22,7 +22,7 @@ const processSteps = [
     description:
       "Budgeting, casting, locations, crew and scheduling.",
     detail: "PREPARATION & PLANNING",
-    icon: ClipboardList,
+
   },
   {
     number: "03",
@@ -30,7 +30,7 @@ const processSteps = [
     description:
       "Disciplined shoot management with quality control on set.",
     detail: "BRINGING STORIES TO LIFE",
-    icon: Clapperboard,
+
   },
   {
     number: "04",
@@ -38,7 +38,6 @@ const processSteps = [
     description:
       "Editing, music, sound design, colour grading and finishing.",
     detail: "CRAFTING THE FINAL CUT",
-    icon: Film,
   },
   {
     number: "05",
@@ -46,7 +45,6 @@ const processSteps = [
     description:
       "Platform-ready delivery and release support.",
     detail: "READY FOR THE AUDIENCE",
-    icon: Send,
   },
 ];
 

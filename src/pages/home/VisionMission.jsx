@@ -7,12 +7,6 @@ import {
 } from "lucide-react";
 
 
-const visionPoints = [
-  "Authentic devotional storytelling",
-  "High-quality fiction",
-  "Stories connecting generations",
-];
-
 const missionPoints = [
   "Honour faith, culture and values with sensitivity and respect.",
   "Develop original, engaging and well-crafted fiction.",
