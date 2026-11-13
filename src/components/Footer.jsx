@@ -138,17 +138,36 @@ export default function Footer() {
                   CINEMA THAT ENDURES.
                 </div>
 
-                <div className="custom-footer-socials">
-                  <a href="#" aria-label="Instagram">
-                    <FaInstagram size={17} />
-                  </a>
-                  <a href="#" aria-label="Facebook">
-                    <FaFacebook size={17} />
-                  </a>
-                  <a href="#" aria-label="YouTube">
-                    <FaYoutube size={18} />
-                  </a>
-                </div>
+
+<div className="custom-footer-socials">
+  <a
+    href="https://www.instagram.com/YOUR_USERNAME/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+  >
+    <FaInstagram size={17} />
+  </a>
+
+  <a
+    href="https://www.facebook.com/YOUR_PAGE/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+  >
+    <FaFacebook size={17} />
+  </a>
+
+  <a
+    href="https://www.youtube.com/@YOUR_CHANNEL"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="YouTube"
+  >
+    <FaYoutube size={18} />
+  </a>
+</div>
+
               </div>
             </div>
 
