@@ -6,7 +6,6 @@ import {
   Drama,
   PenTool,
   Film,
-  ArrowUpRight,
 } from "lucide-react";
 
 import "../../css/WhatWeDo.css";

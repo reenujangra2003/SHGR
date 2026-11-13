@@ -5,11 +5,9 @@ import {
   MapPin,
   Phone,
   Mail,
-  Clock,
   MessageCircle,
   Send,
   ChevronDown,
-  Film,
   CheckCircle2,
 } from "lucide-react";
 

@@ -1,19 +1,11 @@
 
 import {
-  ArrowRight,
   ArrowUpRight,
   Lightbulb,
-  FileText,
   ClipboardList,
   Clapperboard,
   Scissors,
   Send,
-  Search,
-  Film,
-  Users,
-  CalendarDays,
-  Camera,
-  MonitorPlay,
 } from "lucide-react";
 
 import "../css/Services.css";

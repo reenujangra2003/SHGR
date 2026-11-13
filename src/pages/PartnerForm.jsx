@@ -8,7 +8,6 @@ import {
   Building2,
   Landmark,
   Users,
-  BriefcaseBusiness,
   Upload,
   Send,
   CheckCircle2,

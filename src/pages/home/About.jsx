@@ -1,7 +1,6 @@
 
 import {
   ArrowRight,
-  ArrowUpRight,
   Flower2,
   Clapperboard,
   MonitorPlay,

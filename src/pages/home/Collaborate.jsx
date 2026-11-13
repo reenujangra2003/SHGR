@@ -5,7 +5,6 @@ import {
   MonitorPlay,
   PenTool,
   Landmark,
-  ArrowUpRight,
 } from "lucide-react";
 import "../../css/Collaborate.css";
 
